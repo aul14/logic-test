@@ -18,8 +18,7 @@
     foreach ($status as $key => $val) {
         $index = array_search($find, $val);
         $data = $kelengkapan[$key][$index];
-        $result[] = $data;
-      
+        $result[] = [$data];
     }
     echo json_encode($result);
     ?>
