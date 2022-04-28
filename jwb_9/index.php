@@ -10,13 +10,18 @@
 
 <body>
     <?php
+
     $status = [["Complete"], ["Incomplete", "Complete"], ["Complete", "Incomplete"]];
     $kelengkapan = [["Kwitansi Keseluruhan"], ["Form Claim", "Copy Buku Kehamilan"], ["Rincian Biaya Lab", "Rincian Biaya Obat"]];
-
+    $find = "Complete";
+    $result = [];
     foreach ($status as $key => $val) {
-        // $data = array_search("Complete", $val);
-
+        $index = array_search($find, $val);
+        $data = $kelengkapan[$key][$index];
+        $result[] = $data;
+      
     }
+    echo json_encode($result);
     ?>
 
 </body>

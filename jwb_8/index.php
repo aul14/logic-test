@@ -18,7 +18,8 @@
         }
         return false;
     });
-    print_r(array_values(($result)));
+    $result =  array_values(($result));
+    echo json_encode($result);
     ?>
 
 </body>
